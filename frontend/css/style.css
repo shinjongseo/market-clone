@@ -1,0 +1,32 @@
+@import "reset.css";
+@import "header.css";
+@import "main.css";
+@import "footer.css";
+@import "write.css";
+
+:root {
+  --button-primary: rgba(254, 111, 15, 0.8);
+  --button-primary-hover: rgb(254, 111, 15);
+}
+
+body {
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+.media-info-msg {
+  background-color: #fcd0cc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .media-info-msg {
+    display: none;
+  }
+}
