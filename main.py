@@ -49,10 +49,12 @@ def login(id:Annotated[str,Form()],
     raise InvalidCredentialsException
   
   access_token = manager.create_access_token(data={
+    'sub' : {
     
     'id' : user['id'],
     'name' : user['name'],
     'email' : user['email']
+    }
   })
   return {'access_token':access_token}
 

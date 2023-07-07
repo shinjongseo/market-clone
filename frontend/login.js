@@ -11,6 +11,8 @@ const handleSubmit = async (event) => {
     body: formData,
   });
   const data = await res.json();
+  const accessToken = data.access_token;
+  console.log(accessToken);
 
   if (res.status == "200") {
     alert("로그인에 성공했습니다!");
